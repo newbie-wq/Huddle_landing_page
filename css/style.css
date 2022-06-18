@@ -22,6 +22,13 @@ body {
     font-size: 18px;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 button {
     height: 2.5rem;
     font-weight: bolder;
@@ -41,6 +48,7 @@ header {
     height: 40rem;
     color: var(--dark-cyan);
     padding: 1rem 0;
+    margin-bottom: 7rem;
 }
 
 nav {
@@ -68,10 +76,6 @@ nav {
 
 header .hero {
     margin: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 header .hero-text {
@@ -86,40 +90,147 @@ header .hero-text h1 {
 
 .cta {
     background-color: var(--pink);
-    color: #fff;
+    color: var(--pale-cyan);
     padding: .7rem 3rem;
-    margin: 1.5rem 0;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cta:hover {
     background-color: lightpink;
 }
 
+header .hero-text .cta {
+    margin: 1.5rem 0;
+}
+
 .hero img {
     width: 42rem;
 }
 
+
 h2 {
     text-transform: capitalize;
+    color: var(--dark-cyan);
+    font-weight: 700;
+}
+
+section {
+    margin: 0 auto 2rem;
+    max-width: 75rem;
+    padding: 3rem 2rem 3rem 6rem;
+    color: var(--dark-cyan);
+    border-radius: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+section .container-text {
+    width: 32rem;
+}
+
+section .container-text p{
+    margin-top: 1rem;
+    color: var(--gray-blue);
+}
+
+section img {
+    max-height: 20rem;
+    max-width: 20rem;
+}
+
+.call-to-action {
+    width: 42rem;
+    margin: 1rem auto;
+    padding: 2.5rem 0;
+    text-align: center;
+    background-color: #fff;
+    z-index: 3;
+    border-radius: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(7rem);
+}
+
+.call-to-action .cta {
+    height: 3.5rem;
+    max-width: 20rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+footer {
+    background-color: var(--dark-cyan);
+    color: var(--pale-cyan);
+    padding: 10rem 6rem 4rem 4rem;
+}
+
+footer img {
+    filter: saturate(0%) brightness(1000%);
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 7rem;
+    margin-top: 3rem;
+}
+
+footer ul {
+    /* margin-top: 3rem; */
+}
+
+footer ul:first-child li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+footer ul:last-child {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+footer ul:last-child li {
+    padding: .5rem .8rem;
+    border: 1px solid var(--pale-cyan);
+    border-radius: 50%;
+}
+
+footer ul:last-child li:hover i {
+    color: var(--pink);
+}
+
+footer ul:last-child li:hover {
+    border-color: var(--pink);
+}
+
+footer li  {
+    list-style: none;
+    max-width: 24rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    /* gap: 1rem; */
 }
 
 
+footer a {
+    text-decoration: none;
+    color: var(--pale-cyan);
+    transition: all 0.3s ease 0s;
+}
 
+footer a:hover {
+    text-decoration: underline;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.copyright {
+    text-align: right;
+    font-size: .8rem;
+}
 
 
 
@@ -189,6 +300,10 @@ h2 {
         font-size: 75%;
     }
 
+    .flex {
+        justify-content: center;
+    }
+
     header {
         height: 58rem;
     }
@@ -221,5 +336,66 @@ h2 {
         height: 3.2rem;
         padding: .7rem 3.3rem;
         margin: 2rem 0 3.5rem;
+    }
+
+
+    section {
+        margin: 0 1.5rem 2rem;
+        max-width: 75rem;
+        padding: 3rem 1rem 3rem 1rem;
+    }
+    
+    section .container-text{
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    section .container-text h2{
+        font-size: 2rem;
+    }
+
+    section .container-text p{
+        font-size: 1.4rem;
+    }
+
+    .call-to-action {
+        width: 28rem;
+        padding: 2.5rem 0;
+    }
+
+    .call-to-action h2 {
+        font-size: 1.5rem;
+    }
+
+    .call-to-action .cta {
+        height: 3.5rem;
+        width: 18rem;
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        padding: 10rem 1rem 4rem 2rem;
+    }
+
+    footer .footer-container {
+        display: block;
+        margin-right: 0;
+    }
+
+    footer li  {
+        font-size: 1.3rem;
+    }
+    
+    footer ul:first-child {
+        margin-bottom: 5rem;
+    }
+
+    footer ul:last-child {
+        justify-content: center;
+    }
+    
+    .copyright {
+        text-align: center;
+        font-size: 1.1rem;
     }
 }
